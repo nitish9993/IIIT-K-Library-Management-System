@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BookList.BookListController">
+   <children>
+      <TableView fx:id="tableview" layoutX="14.0" layoutY="14.0" prefHeight="350.0" prefWidth="600.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="titlecol" prefWidth="177.0" text="Title" />
+          <TableColumn fx:id="idcol" prefWidth="115.0" text="Accession No." />
+            <TableColumn fx:id="authorcol" prefWidth="147.0" text="Author" />
+            <TableColumn fx:id="pubcol" prefWidth="160.0" text="Publisher" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="222.0" layoutY="361.0" onAction="#deleteButtonpushed" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: RED;" text="DELETE" textFill="#f8f5f5" />
+   </children>
+</AnchorPane>
