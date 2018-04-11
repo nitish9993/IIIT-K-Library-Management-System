@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Library_help.jnlp">
+  <information>
+    <title>Library_help</title>
+    <vendor>Rupak Kalita</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" java-vm-args="-splash:src/library_help/loading.gif "  href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Library_help.jar" size="884710" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\jfoenix-8.0.1.jar" size="2405715" download="eager" />
+    <jar href="lib\scenebuilder-8.4.1-all.jar" size="9756814" download="eager" />
+    <jar href="lib\sqlite-jdbc-3.20.0.jar" size="6637012" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Library_help" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="library_help.Library_help"  name="Library_help" />
+  <update check="always"/>
+</jnlp>

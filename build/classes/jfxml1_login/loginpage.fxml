@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="450.0" prefWidth="573.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jfxml1_login.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="1.0" layoutY="7.0" minHeight="16" minWidth="69" prefHeight="241.0" prefWidth="267.0" textAlignment="CENTER" textFill="#4b4b64" />
+      <AnchorPane layoutX="268.0" prefHeight="450.0" prefWidth="305.0" style="-fx-background-color: #1d71f7;">
+         <children>
+            <TextField fx:id="txtusername" layoutX="38.0" layoutY="123.0" prefHeight="25.0" prefWidth="198.0" promptText="username/email_id" />
+            <PasswordField fx:id="txtpassword" layoutX="38.0" layoutY="172.0" prefHeight="25.0" prefWidth="198.0" promptText="password" />
+            <Label layoutX="94.0" layoutY="50.0" prefHeight="53.0" prefWidth="142.0" text="Login Page" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="signin" layoutX="150.0" layoutY="236.0" onAction="#signIn" prefHeight="7.0" prefWidth="83.0" text="sign up" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="forgotpassword" layoutX="70.0" layoutY="283.0" onAction="#forgot" prefHeight="41.0" prefWidth="149.0" text="forgot password ?" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Hyperlink>
+            <JFXButton buttonType="RAISED" layoutX="56.0" layoutY="240.0" onAction="#login" prefHeight="25.0" prefWidth="63.0" ripplerFill="#ab1f1f" style="-fx-background-color: green; -fx-background-radius: 25;" text="Login" textFill="WHITE" />
+            <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="36.0" layoutY="90.0" size="40" />
+         </children>
+      </AnchorPane>
+      <TextField layoutX="-102.0" layoutY="-49.0" />
+      <Label layoutX="7.0" layoutY="30.0" prefHeight="122.0" prefWidth="259.0" text="IIIT Kalyani Library" textAlignment="CENTER" textFill="#0a1080" wrapText="true">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="-116.0" layoutY="6.0" text="Label" />
+      <ImageView fitHeight="160.0" fitWidth="166.0" layoutX="48.0" layoutY="157.0" opacity="0.62" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/unnamed.jpg" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,58 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="334.0" prefWidth="397.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Addbook.AddBookController">
+   <children>
+      <VBox prefHeight="284.0" prefWidth="397.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="title" focusColor="#17191e" labelFloat="true" promptText="Book Title" unFocusColor="#941919">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="id" focusColor="#17191e" labelFloat="true" layoutX="30.0" layoutY="30.0" promptText="Book Accession Number" unFocusColor="#941919">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="author" focusColor="#17191e" labelFloat="true" layoutX="30.0" layoutY="30.0" promptText="Book Author" unFocusColor="#941919">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="publisher" focusColor="#17191e" labelFloat="true" layoutX="10.0" layoutY="100.0" promptText="Publisher" unFocusColor="#941919">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+         </children></VBox>
+      <JFXButton layoutX="208.0" layoutY="290.0" onAction="#cancelbtn" prefHeight="39.0" prefWidth="110.0" style="-fx-background-color: #1d71f7; -fx-background-radius: 25;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="68.0" layoutY="290.0" onAction="#addBook" prefHeight="39.0" prefWidth="110.0" style="-fx-background-color: #1d71f7; -fx-background-radius: 25;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="searchWindow.searchWindowController">
+   <children>
+      <TableView fx:id="atableview" layoutX="14.0" layoutY="47.0" prefHeight="174.0" prefWidth="600.0" AnchorPane.bottomAnchor="184.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="47.0">
+        <columns>
+          <TableColumn fx:id="titlecol" prefWidth="177.0" text="Title" />
+          <TableColumn fx:id="idcol" prefWidth="115.0" text="Accession No." />
+            <TableColumn fx:id="authorcol" prefWidth="147.0" text="Author" />
+            <TableColumn fx:id="pubcol" prefWidth="160.0" text="Publisher" />
+        </columns>
+      </TableView>
+      <Button layoutX="213.0" layoutY="9.0" mnemonicParsing="false" onAction="#search" text="Go" />
+      <Button layoutX="550.0" layoutY="9.0" mnemonicParsing="false" onAction="#member" text="Go" />
+      <TextField fx:id="searchId" layoutX="34.0" layoutY="9.0" onAction="#search" promptText="Search Book" />
+      <TextField fx:id="memberId" layoutX="370.0" layoutY="9.0" onAction="#member" promptText="Search Member" />
+      <TableView fx:id="tableviewmember" layoutY="221.0" prefHeight="184.0" prefWidth="600.0">
+         <columns>
+            <TableColumn fx:id="namecol" prefWidth="177.0" text="Name" />
+            <TableColumn fx:id="idmcol" prefWidth="115.0" text="Accession No." />
+            <TableColumn fx:id="mobcol" prefWidth="147.0" text="Mobile" />
+            <TableColumn fx:id="emailcol" prefWidth="160.0" text="Email" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
