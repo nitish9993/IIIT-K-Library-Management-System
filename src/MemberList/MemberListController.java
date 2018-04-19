@@ -42,6 +42,7 @@ public class MemberListController implements Initializable {
     ObservableList<Member> list= FXCollections.observableArrayList();
 
     @Override
+    //database connection
     public void initialize(URL url, ResourceBundle rb) {
         initcol();
         connectDB = new ConnectDB();
