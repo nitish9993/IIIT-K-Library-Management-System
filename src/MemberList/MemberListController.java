@@ -24,7 +24,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-
+//main controller
 public class MemberListController implements Initializable {
 
     @FXML
@@ -49,7 +49,7 @@ public class MemberListController implements Initializable {
 
         tableview.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
-
+// delet button action
     public void deleteButtonpushed()
     {
         ObservableList<Member> selectedRows,allMembers;
@@ -69,7 +69,7 @@ public class MemberListController implements Initializable {
         numcol.setCellValueFactory(new PropertyValueFactory<>("mobile"));
         emailcol.setCellValueFactory(new PropertyValueFactory<>("email"));
     }
-    //loading data    
+    //loading data
     public void LoadData(){
         String sql = "SELECT * FROM tbl_addmember";
         try {
