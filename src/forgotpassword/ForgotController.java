@@ -25,14 +25,15 @@ import javafx.scene.control.TextField;
  *
  * @author Rupak Kalita
  */
+ //main controller
 public class ForgotController implements Initializable {
 
     @FXML
     private TextField email;
-    
+
     @FXML
     private TextField dob;
-    
+
     @FXML
     private Label retpass;
     @FXML
@@ -43,12 +44,12 @@ public class ForgotController implements Initializable {
 //    Boolean isReadyForSubmission = false;
     public String email1;
     public String dob1;
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         connectDB = new ConnectDB();
     }
-    
+  //login  
     public boolean isLogin() throws SQLException{
     PreparedStatement pt=null;
     ResultSet rs=null;
@@ -60,10 +61,10 @@ public class ForgotController implements Initializable {
         pt.setString(2, dob1);
         rs=pt.executeQuery();
        if(rs.next()){
-          
+
            return true;
        }else{
-       
+
            return false;
        }
     }catch(Exception e){
@@ -72,43 +73,43 @@ public class ForgotController implements Initializable {
         rs.close();
         pt.close();
     }
-    
-}  
-    
-    
+
+}
+
+
    @FXML
    public void getpass(ActionEvent event) throws SQLException {
             try{
                 email1 = email.getText();
                 dob1 = dob.getText();
          if(isLogin()){
-             
-       
+
+
          String id = email1;
-       
+
 
         String sql = "SELECT * FROM tbl_signmember WHERE email = '" + id + "'";
 
         Connection conn = ConnectDB.getConnections();
         PreparedStatement pst = conn.prepareStatement(sql);
-        
+
         ResultSet rst = pst.executeQuery();
-        
-        
-        
+
+
+
         while (rst.next()) {
             String pass = rst.getString("password");
-         
-            retpass.setText("Your password is : " + pass);      
+
+            retpass.setText("Your password is : " + pass);
             }
          }
         else{
          retpass.setText("oops....!! wrong input...try again");
-         } 
+         }
      }
          catch(SQLException e){
          retpass.setText("00ps....!! wrong input ");
-     }  
+     }
    }
 
 }
