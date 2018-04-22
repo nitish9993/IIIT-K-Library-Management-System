@@ -49,7 +49,7 @@ public class ForgotController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         connectDB = new ConnectDB();
     }
-  //login  
+  //login
     public boolean isLogin() throws SQLException{
     PreparedStatement pt=null;
     ResultSet rs=null;
@@ -76,7 +76,7 @@ public class ForgotController implements Initializable {
 
 }
 
-
+//get-password
    @FXML
    public void getpass(ActionEvent event) throws SQLException {
             try{
