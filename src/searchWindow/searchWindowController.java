@@ -59,7 +59,7 @@
 
     /**
      *
-     * @author abhijeetsinghkhangarot
+     * @author nitishsingh
      */
     public class searchWindowController implements Initializable {
 
@@ -121,7 +121,7 @@
             Connection conn = ConnectDB.getConnections();
             PreparedStatement pst1 = conn.prepareStatement(sql_books);
             ResultSet rst = pst1.executeQuery();
-            startBook();  
+            startBook();
         }
 
         @FXML
