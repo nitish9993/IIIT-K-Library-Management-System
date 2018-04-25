@@ -104,7 +104,7 @@ public class ForgotController implements Initializable {
          }
      }
          catch(SQLException e){
-         retpass.setText("00ps....!! wrong input ");
+         retpass.setText("00ps....!! something wrong ");
      }
    }
 
