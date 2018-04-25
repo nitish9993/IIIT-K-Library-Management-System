@@ -23,7 +23,7 @@ import javafx.scene.control.TextField;
 /**
  * FXML Controller class
  *
- * @author Rupak Kalita
+ * @author Nitish kumar singh
  */
  //main controller
 public class ForgotController implements Initializable {
