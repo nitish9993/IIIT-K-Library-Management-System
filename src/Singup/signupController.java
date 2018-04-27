@@ -25,7 +25,7 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author Rupak Kalita
+ * @author Nitish Kumar Singh
  */
 public class signupController implements Initializable {
     @FXML
@@ -49,7 +49,7 @@ public class signupController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void alreadyMember(ActionEvent event) {
@@ -63,32 +63,30 @@ public class signupController implements Initializable {
         String mpassword = password.getText();
         String mrepassword = repassword.getText();
         String mdob = dob.getText();
-        
+
         if(memail.isEmpty() || mpassword.isEmpty() || mrepassword.isEmpty() || mdob.isEmpty()){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setContentText("Fields must not be empty");
             alert.showAndWait();
             return;
-        } 
-        
+        }
+
         String sql = "INSERT INTO tbl_signmember (email,password,repassword,dob) VALUES(?,?,?,?)";
         Connection conn = ConnectDB.getConnections();
         PreparedStatement pst = conn.prepareStatement(sql);
-        
+
         pst.setString(1,memail);
         pst.setString(2,mpassword);
         pst.setString(3,mrepassword);
         pst.setString(4,mdob);
-        
+
         pst.execute();
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setHeaderText(null);
             alert.setContentText("Member added successfully");
             alert.showAndWait();
-        
-        
+
+
         }
 }
-    
-
